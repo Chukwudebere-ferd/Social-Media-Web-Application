@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFIware</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            padding: 0%;
+            margin: 0%;
+            word-wrap: wrap;
+            width: 100%;
+        }
+        @media (max-width:700px) {
+            header{
+                width: 100%;
+                height: 50px;
+                background-color: white;
+                position: fixed;
+                color: #071a0b;
+                display: flex;
+                justify-content: space-between;
+            }
+            header div p{
+                margin: 20px;
+            }
+            .menu-bar{
+                padding-top: 10px;
+                padding-left: 10em;
+            }
+            .menu-bar button{
+                width: 5em;
+                height: 2em;
+                background-color: lightgreen;
+                border: 0px;
+                border-radius: 2em;
+            }
+            .menu-option{
+                display: flex;
+                background-color: lightgreen;
+                flex-direction: column;
+            }
+           main{
+            width: 100%;
+            height: 120vh;
+            background-color: #071a0b;
+            padding: 30px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            white-space: nowrap;
+           }
+           .hero{
+            font-size: 30px;
+            color: white;
+            margin-top: 50px;
+            animation-name: welcome;
+            animation-duration: 3s;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+           }
+           @keyframes welcome{
+           from{transform: translatey(20px);}
+           }
+           .hero-p{
+            display: flex;
+            flex-direction: column;
+            margin-top: 40px;
+           }
+       
+           .hero-p h1{
+            color: lightgreen;
+            margin-bottom: 20px;
+            animation-name: mission;
+            animation-duration: 2s;
+            
+           }
+           @keyframes mission{
+            from{transform: translatex(300px);}
+        }
+           .our{
+            color: white;
+           }
+           .hero-p p{
+            color: white;
+            margin-bottom: 10px;
+            word-wrap: wrap;
+            animation-name: mission-p;
+            animation-duration: 2s;
+            animation-delay: 0.1s;
+           }
+           @keyframes mission-p{
+            from{transform: translateY(100px);}
+           }
+           .hero-img{
+            width: 100%;
+            justify-content: center;
+            margin-top: 10px;
+           }
+           .hero-img img{
+            width: 80%;
+            animation-name: img;
+            animation-duration: 2s;
+            animation-delay: 0.1s;
+            animation-timing-function: ease;
+            
+           }
+           @keyframes img {
+            from{transform: translateY(50px);}
+           }
+           
+           .container-p h1{
+            color: darkgreen;
+            font-weight: bolder;
+            margin-bottom: 20px;
+            text-align: center;
+            margin-top: 20px;
+           }
+           .our2{
+            color:#071a0b;
+           }
+           .container-p p{
+            font-weight: bold;
+            font-size: small;
+            text-align: center;
+            align-items: center;
+           }
+           .services-img{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+           }
+           .services-img1{
+           display: flex;
+           text-align: center;
+           flex-direction: column;
+           background-color: #F8F8F9;
+           width: 80%;
+           height: 220px;
+           padding-top: 30px;
+           margin-left: 30px;
+           margin-top: 20px;
+           margin-bottom: 20px;
+           
+           animation-name: service-img1;
+           animation-duration: 1s;
+        }
+        @keyframes service-img1{
+            from{transform: translateX(100px);}
+        }
+        .services-img1 img{
+        width: 100px;
+        padding-left: 100px;
+        margin-bottom: 10px;
+        }
+        .services-img1 h5{
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #071a0b;
+        font-size: large;
+        }
+        .services-img1 p{
+            color: darkgreen;
+            font-weight: bold;
+        }
+        .services-img2{
+           display: flex;
+           text-align: center;
+           flex-direction: column;
+           background-color: #F8F8F9;
+           width: 80%;
+           height: 220px;
+           padding-top: 30px;
+           margin-left: 30px;
+           margin-top: 20px;
+           margin-bottom: 20px;
+           
+           animation-name: service-img1;
+           animation-duration: 1s;
+        }
+        @keyframes service-img2{
+            from{transform: translateX(100px);}
+        }
+        .services-img2 img{
+        width: 100px;
+        padding-left: 100px;
+        margin-bottom: 10px;
+        }
+        .services-img2 h5{
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #071a0b;
+        font-size: large;
+        }
+        .services-img2 p{
+            color: darkgreen;
+            font-weight: bold;
+        }
+        .services-img3{
+           display: flex;
+           text-align: center;
+           flex-direction: column;
+           background-color: #F8F8F9;
+           width: 80%;
+           height: 220px;
+           padding-top: 30px;
+           margin-left: 30px;
+           margin-top: 20px;
+           margin-bottom: 20px;
+           
+           animation-name: service-img1;
+           animation-duration: 1s;
+        }
+        @keyframes service-img3{
+            from{transform: translateX(100px);}
+        }
+        .services-img3 img{
+        width: 100px;
+        padding-left: 100px;
+        margin-bottom: 10px;
+        }
+        .services-img3 h5{
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #071a0b;
+        font-size: large;
+        }
+        .services-img3 p{
+            color: darkgreen;
+            font-weight: bold;
+        }
+        .services-img4{
+           display: flex;
+           text-align: center;
+           flex-direction: column;
+           background-color: #F8F8F9;
+           width: 80%;
+           height: 220px;
+           padding-top: 30px;
+           margin-left: 30px;
+           margin-top: 20px;
+           margin-bottom: 20px;
+           
+           animation-name: service-img1;
+           animation-duration: 1s;
+        }
+        @keyframes service-img4{
+            from{transform: translateX(100px);}
+        }
+        .services-img4 img{
+        width: 100px;
+        padding-left: 100px;
+        margin-bottom: 10px;
+        }
+        .services-img4 h5{
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #071a0b;
+        font-size: large;
+        }
+        .services-img4 p{
+            color: darkgreen;
+            font-weight: bold;
+        }
+        .about-us{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: #071a0b;
+            width: 100%;
+            height: 80vh;
+            padding-top: 30px;
+            animation-name: about-us;
+            animation-duration: 5s;
+        }
+        @keyframes about-us {
+            from{transform: rotate3d(30deg);}
+        }
+        .about-us h1{
+         color: rgb(138, 253, 138);
+         font-weight: bolder;
+         margin-bottom: 20px;
+        }
+        .about-us p{
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 30px;
+            animation-name: about-us-p;
+            animation-duration: 2s;
+        }
+        @keyframes about-us-p {
+            from{transform: translateX(50px);}
+        }
+        .about-us img{
+            width: 60%;
+            animation-name: about-us-img;
+            animation-duration: 1s;
+        }
+        @keyframes about-us-img {
+            from{transform: translateY(50px);}
+        }
+        .team{
+            background-color: #071a0b;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            padding-top: 30px;
+            animation-name: team;
+            animation-duration: 2s;
+            animation-delay: 2s;
+        }
+        @keyframes team {
+            from{transform: translatey(35px);}
+        }
+        .team-head{
+            color:lightgreen;
+            font-weight: bolder;
+            font-size: xxx-large;
+        }
+        .our2{
+            color: green;
+            padding-right: 20px;
+        }
+        .team1{
+            width: 70%;
+            height:50vh ;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: #F8F8F9;
+            padding-top: 30px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border-radius: 20px;
+
+        
+      } 
+      .team1 img{
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        border: 5px solid green;
+        margin-bottom: 20px;
+      }
+      .team1 h2{
+        color: green;
+        font-weight: bolder;
+        margin-bottom: 20px;
+      }
+      .team1 p{
+        color: lightgreen;
+        font-weight: bolder;
+        text-align: center;
+        font-size: 20px;
+      }
+   .team2{
+    width: 70%;
+            height:50vh ;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: #F8F8F9;
+            padding-top: 30px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border-radius: 20px;
+
+   }  
+   .team2 img{
+    width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        border: 5px solid green;
+        margin-bottom: 20px;
+}
+.team2 h2{
+        color: green;
+        font-weight: bolder;
+        margin-bottom: 20px;
+      }
+      .team2 p{
+        color: lightgreen;
+        font-weight: bolder;
+        text-align: center;
+        font-size: 20px;
+      }
+      .team-2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .links{
+        display: flex;
+        background-color: #071a0b;
+        width: 100%;
+        height: 40vh;
+        animation-name: links;
+        animation-duration: 3s;
+        animation-delay: 3s;
+
+      }
+      @keyframes links {
+        from{transform: rotatez(30deg);}
+      }
+      .ul-links li{
+        display: flex;
+        color: #F8F8F9;
+        padding-top: 30px;
+        padding-left: 20px;
+        font-weight: bolder;
+        font-size: 20px;
+        
+      }
+      .links li:hover{
+        background-color: #071a0b;
+        color: lightgreen;
+        
+      }
+     .links a{
+     text-decoration: none;
+     color: #071a0b;
+     }
+     
+    }  
+    @media (min-width:700px) {
+        
+    
+      header{
+        display: flex;
+        background-color: #071a0b;
+        width: 100%;
+        height: 10vh;
+        position: fixed;
+      }
+      header p{
+        color: #F8F8F9;
+        padding-top: 15px;
+        padding-left: 20px;
+        font-size: larger;
+        font-family: sans-serif;
+        font-size: 30px;
+        
+      }
+     
+      main{
+     background-color: #071a0b;
+     height: 90vh;
+     padding-top: 120px;
+     padding-left: 20px;
+     
+      }
+      .hero{
+        display: flex;
+        font-size: 50px;
+        color: #F8F8F9;
+        animation-name: header-p;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+        animation-direction: alternate;
+        
+      }
+      @keyframes header-p {
+        to{transform: translatex(20px);}
+      }
+      .hero-p{
+        font-weight: bolder;
+        color: #F8F8F9;
+      
+      }
+   .hero-p h1{
+    color: lightgreen;
+    margin-top: 20px;
+    margin-bottom: 20px;
+   }
+   .hero-p p{
+    margin-bottom: 30px;
+   }
+   .hero-img img{
+    width: 40%;
+    margin-left: 0px;
+    position: absolute;
+    top:50px;
+    animation-name: header-img;
+        animation-duration: 3s;
+        animation-delay: 0.1s;
+        animation-timing-function: linear;
+        animation-direction: alternate-reverse;
+        animation-iteration-count: infinite;
+   }
+   @keyframes header-img {
+    from{transform: translateY(30px);}
+   }
+   .main{
+    display: flex;
+    
+   }
+   .container-p h1{
+            color: darkgreen;
+            font-weight: bolder;
+            margin-bottom: 20px;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 50px;
+           }
+           .our2{
+            color:#071a0b;
+           }
+           .container-p p{
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center;
+            align-items: center;
+           }
+           .services-img{
+            display: flex;
+            align-items: center;
+            width: 100%;
+           }
+           .services-img1{
+           display: flex;
+           text-align: center;
+           flex-direction: column;
+           background-color: #F8F8F9;
+           width: 80%;
+           height: 220px;
+           padding-top: 30px;
+           margin-left: 30px;
+           margin-top: 20px;
+           margin-bottom: 20px;
+           
+           animation-name: service-img1;
+           animation-duration: 1s;
+        }
+        @keyframes service-img1{
+            from{transform: translateX(100px);}
+        }
+        .services-img1 img{
+        width: 100px;
+        padding-left: 100px;
+        margin-bottom: 10px;
+        }
+        .services-img1 h5{
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #071a0b;
+        font-size: large;
+        }
+        .services-img1 p{
+            color: darkgreen;
+            font-weight: bold;
+        }
+        .services-img2{
+           display: flex;
+           text-align: center;
+           flex-direction: column;
+           background-color: #F8F8F9;
+           width: 80%;
+           height: 220px;
+           padding-top: 30px;
+           margin-left: 30px;
+           margin-top: 20px;
+           margin-bottom: 20px;
+           
+           animation-name: service-img1;
+           animation-duration: 1s;
+        }
+        @keyframes service-img2{
+            from{transform: translateX(100px);}
+        }
+        .services-img2 img{
+        width: 100px;
+        padding-left: 100px;
+        margin-bottom: 10px;
+        }
+        .services-img2 h5{
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #071a0b;
+        font-size: large;
+        }
+        .services-img2 p{
+            color: darkgreen;
+            font-weight: bold;
+        }
+        .services-img3{
+           display: flex;
+           text-align: center;
+           flex-direction: column;
+           background-color: #F8F8F9;
+           width: 80%;
+           height: 220px;
+           padding-top: 30px;
+           margin-left: 30px;
+           margin-top: 20px;
+           margin-bottom: 20px;
+           
+           animation-name: service-img1;
+           animation-duration: 1s;
+        }
+        @keyframes service-img3{
+            from{transform: translateX(100px);}
+        }
+        .services-img3 img{
+        width: 100px;
+        padding-left: 100px;
+        margin-bottom: 10px;
+        }
+        .services-img3 h5{
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #071a0b;
+        font-size: large;
+        }
+        .services-img3 p{
+            color: darkgreen;
+            font-weight: bold;
+        }
+        .services-img4{
+           display: flex;
+           text-align: center;
+           flex-direction: column;
+           background-color: #F8F8F9;
+           width: 80%;
+           height: 220px;
+           padding-top: 30px;
+           margin-left: 30px;
+           margin-top: 20px;
+           margin-bottom: 20px;
+           
+           animation-name: service-img1;
+           animation-duration: 1s;
+        }
+        @keyframes service-img4{
+            from{transform: translateX(100px);}
+        }
+        .services-img4 img{
+        width: 100px;
+        padding-left: 100px;
+        margin-bottom: 10px;
+        }
+        .services-img4 h5{
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #071a0b;
+        font-size: large;
+        }
+        .services-img4 p{
+            color: darkgreen;
+            font-weight: bold;
+        }
+        .about-us{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: #071a0b;
+            width: 100%;
+            height: 100vh;
+            padding-top: 30px;
+            animation-name: about-us;
+            animation-duration: 5s;
+        }
+        @keyframes about-us {
+            from{transform: rotate3d(30deg);}
+        }
+        .about-us h1{
+         color: rgb(138, 253, 138);
+         font-weight: bolder;
+         margin-bottom: 20px;
+        }
+        .about-us p{
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+            margin-bottom: 30px;
+            animation-name: about-us-p;
+            animation-duration: 2s;
+        }
+        @keyframes about-us-p {
+            from{transform: translateX(50px);}
+        }
+        .about-us img{
+        width: 50%;
+            height: 70vh;
+            animation-name: about-us-img;
+            animation-duration: 1s;
+        }
+        @keyframes about-us-img {
+            from{transform: translateY(50px);}
+        }
+    
+        .team{
+            background-color:#071a0b;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            padding-top: 30px;
+            animation-name: team;
+            animation-duration: 2s;
+            animation-delay: 2s;
+        }
+        @keyframes team {
+            from{transform: translatey(35px);}
+        }
+        .team-head{
+            color:green;
+            font-weight: bolder;
+            font-size: xxx-large;
+        }
+        .our2{
+            color: white;
+            padding-right: 20px;
+        }
+        .team1{
+            width: 50%;
+            height:50vh ;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: #F8F8F9;
+            padding-top: 30px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border-radius: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            
+
+        
+      } 
+      .team1 img{
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        border: 5px solid green;
+        margin-bottom: 20px;
+      }
+      .team1 h2{
+        color: green;
+        font-weight: bolder;
+        margin-bottom: 20px;
+      }
+      .team1 p{
+        color: lightgreen;
+        font-weight: bolder;
+        text-align: center;
+        font-size: 20px;
+      }
+   .team2{
+    width: 50%;
+            height:50vh ;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: #F8F8F9;
+            padding-top: 30px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border-radius: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+
+   }  
+   .team2 img{
+    width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        border: 5px solid green;
+        margin-bottom: 20px;
+}
+.team2 h2{
+        color: green;
+        font-weight: bolder;
+        margin-bottom: 20px;
+      }
+      .team2 p{
+        color: lightgreen;
+        font-weight: bolder;
+        text-align: center;
+        font-size: 20px;
+      }
+      .team-2{
+        display: flex;
+      }
+      .links{
+        
+        background-color: #071a0b;
+        width: 100%;
+        height: 40vh;
+        animation-name: links;
+        animation-duration: 3s;
+        animation-delay: 3s;
+
+      }
+      @keyframes links {
+        from{transform: rotatez(30deg);}
+      }
+      .ul-links li{
+        color: #F8F8F9;
+        padding-top: 30px;
+        padding-left: 20px;
+        font-weight: bolder;
+        font-size: 20px;
+        
+      }
+      .links li:hover{
+        background-color: #071a0b;
+        color: lightgreen;
+        
+      }
+     .links a{
+     text-decoration: none;
+     color: #071a0b;
+     }
+     .menu-bar{
+        display: none;
+     }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+
+            <p>CFiware</p>
+        </div>
+        <div class="menu-bar">
+          <button>menu</button>
+        </div>
+
+    </header>
+   
+   <main>
+        <div class="hero">
+         <h3>Welcome To <br> CFiware</h3>
+        </div>
+        <div class="main">
+        <div class="hero-p">
+            <h1><span class="our">Our</span> Mission:</h1>
+            <p>--High Quality Solution  That Exceed Expectations</p>
+            <p>--Personalised Services and support That Fosters long-Term Relationships.</p>
+            <p>--Innovative Ideas That Drives Results And Growth </p>
+        </div>
+        <div class="hero-img">
+            <img src="https://i.postimg.cc/mgZFTVD2/Screenshot-20240827-210047.jpg" alt="">
+        </div>
+        </div>
+    </main>
+   <div class="container">
+        <div class="container-p">
+            <h1><span class="our2">Our</span> Services</h1>
+            <p>With a diverse range of skills and epertise our team exceeds in: </p>
+        </div>
+        <div class="services-img">
+            <div class="services-img1">
+         <img src="https://i.postimg.cc/66PTKJ5C/world-globe-line-icon.png">
+            <h5>Website Development:</h5>
+            <p>Custome built Website That engage and convert audience</p>
+            </div>
+            <div class="services-img2">
+                <img src="https://i.postimg.cc/PxrNXdwQ/apk-file-outline-icon.png">
+                <h5>Mobile App Creation:</h5>
+                <p>Intuitive and user-friendly apps for andriod.</p>
+            </div>
+            <div class="services-img3">
+            <img src="https://i.postimg.cc/ZR7n0XPt/art-icon.png">
+            <h5>Graphics Design:</h5>
+            <p>Visual Identity and branding that stands out.</p>
+            </div>
+            <div class="services-img4">
+            <img src="https://i.postimg.cc/ZKKkwChc/video-quality-resolution-4k-icon-1.png" alt="">
+            <h5>Video Editing</h5>
+            <p>Compelling stories told through motion and sounds(ANIMATION)</p>
+            </div>
+        </div>
+         
+    </div>
+    <div class="about-us">
+        <h1>About Us</h1>
+        <p>At CFIware, We are team of Innovative Creators Dedicated to bringing Your digital visions to life. our passion is craft exceptional online experiences through cutting-edge websites development, mobile apps, stunning graphics and captivating video editing</p>
+         <img src="https://i.postimg.cc/5tkJ772N/about.jpg" alt="">
+    </div>
+    <div class="team">
+        <div class="team-head">
+           <p><span class="our2">Our</span>Team</p>
+            </div>
+            <div class="team-2">
+        <div class="team1">
+            <img src="https://i.postimg.cc/DyszWTyQ/favour.jpg" alt="">
+            <h2>Great Favour</h2>
+            <p>back-end Dev</p>
+        </div>
+        <div class="team2">
+            <img src="https://i.postimg.cc/DwTwLM89/ferdinard.jpg" alt="">
+            <h2>Chukwudebere ferdinard</h2>
+            <p>Front-end Dev</p>
+        </div>
+        <div class="team2">
+            <img src="https://i.postimg.cc/N00YxqYz/paschal.jpg" alt="">
+            <h2>Paschal</h2>
+            <p>UI/UX DESIGNER</p>
+        </div>
+        </div>
+    </div>
+  <div class="links">
+        <ul class="ul-links">
+            <a href=""><li>Our Mission</li></a>
+            <a href=""><li>Our Services</li></a>
+            <a href=""><li>About Us</li></a>
+            <a href=""><li>Our Team</li></a>
+        </ul>
+    </div>
+
+</body>
+</html>
